@@ -40,7 +40,7 @@ public class ContacUsPage extends commonActionOnPages {
         pageFactoryInitElement(driver,this);
     }
 
-    //Funcinalidades
+    //Funcionalidades
     public void dirigirHomeHaciaContactUs(){
 
         scrollOn(moduloContactUS);

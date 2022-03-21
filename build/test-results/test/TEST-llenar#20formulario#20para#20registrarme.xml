@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="llenar formulario para registrarme" tests="2" skipped="0" failures="1" errors="0" timestamp="2022-03-20T23:47:21" hostname="LAPTOP-MVJM7QIP" time="18.416">
+  <properties/>
+  <testcase name="diligenciar el formulario para poder registrarme" classname="llenar formulario para registrarme" time="11.147"/>
+  <testcase name="no diligenciar un campo para el registro" classname="llenar formulario para registrarme" time="7.269">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;ArokRoberth33&gt; but was: &lt;up is easy!&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;ArokRoberth33&gt; but was: &lt;up is easy!&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
+	at co.com.sofka.stepDefinitions.paraBankRegister.registerStepDefinition.el_sistema_muestra_en_pantalla_el_mensaje_de_bienvenida(registerStepDefinition.java:114)
+	at ✽.el sistema muestra en pantalla el mensaje de bienvenida(file:///C:/Users/rober/IntellijIDEAJAVA/retoPomPageFactory/src/test/resources/features/register.feature:17)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 24956
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+mar 20, 2022 6:47:25 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 38266
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+mar 20, 2022 6:47:34 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+]]></system-err>
+</testsuite>
