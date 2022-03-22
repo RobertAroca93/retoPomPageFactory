@@ -1,24 +1,19 @@
-package co.com.sofka.stepDefinitions.paraBank.contactus;
+package co.com.sofka.stepDefinitions.paraBankContactus;
 
 import co.com.sofka.model.ContactUs.contactUsModel;
-import co.com.sofka.page.contactUs.ContacUsPage;
-import co.com.sofka.stepDefinitions.setUp.webUI;
+import co.com.sofka.page.contactUs.contacUsPage;
+import co.com.sofka.stepDefinitions.setUp.webUiContactUs;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
-public class ContactUsStepDefinition extends webUI {
+public class contactUsStepDefinition extends webUiContactUs {
 
-    private static Logger LOGGER = Logger.getLogger(ContactUsStepDefinition.class);
+    private static Logger LOGGER = Logger.getLogger(contactUsStepDefinition.class);
     private contactUsModel contactUsModel;
-    private ContacUsPage contactUsPage;
-    String texto;
-    String textoError;
-    String Mensaje="Customer Care";
-    String Mensaje2 = "Message is required.";
-
+    private contacUsPage contactUsPage;
 
 
     @Given("dado que me encuentro en el modulo del contacto")
@@ -44,7 +39,7 @@ public class ContactUsStepDefinition extends webUI {
     @When("estoy diligenciando los campos del formulario y envio el mensaje")
     public void estoyDiligenciandoLosCamposDelFormularioYEnvioElMensaje() {
         try{
-            contactUsPage = new ContacUsPage(driver, 8, contactUsModel);
+            contactUsPage = new contacUsPage(driver, 8, contactUsModel);
             contactUsPage.dirigirHomeHaciaContactUs();
             contactUsPage.llenarFomularioExitoso();
 
@@ -63,6 +58,8 @@ public class ContactUsStepDefinition extends webUI {
         quiteDriver();
     }
 
+    //Segundo scenario
+
     @Given("dado que me encuentro en el modulo del contacto del banco")
     public void dadoQueMeEncuentroEnElModuloDelContactoDelBanco() {
         try{
@@ -75,8 +72,6 @@ public class ContactUsStepDefinition extends webUI {
             contactUsModel.setPhone("321456");
             contactUsModel.setMessage("");
 
-
-
         }catch (Exception exception){
             quiteDriver();
             Assertions.fail(exception.getMessage());
@@ -85,16 +80,13 @@ public class ContactUsStepDefinition extends webUI {
         }
 
     }
-    @When("no diligencio uno de los campos")
-    public void noDiligencioUnoDeLosCampos() {
+    @When("no diligencio el campo phone")
+    public void noDiligencioElCampoPhone() {
         try{
-            contactUsPage = new ContacUsPage(driver, 8, contactUsModel);
+            contactUsPage = new contacUsPage(driver, 8, contactUsModel);
             contactUsPage.dirigirHomeHaciaContactUs();
             contactUsPage.llenarFormularioFallido();
-            textoError= contactUsModel.getTextoError();
-
-
-
+            contactUsPage.mensajeFallido();
 
         }catch (Exception exception){
             quiteDriver();
@@ -102,12 +94,11 @@ public class ContactUsStepDefinition extends webUI {
             LOGGER.warn(exception.getMessage(),exception);
 
         }
-
-
     }
     @Then("el sistema debe solicitar que se diligencie ese campo")
     public void elSistemaDebeSolicitarQueSeDiligencieEseCampo() {
-        Assertions.assertEquals(textoError, Mensaje2);
+        Assertions.assertEquals("Phone is required.", contactUsPage.mensajeFallido());
+        quiteDriver();
 
 
     }

@@ -1,18 +1,15 @@
 package co.com.sofka.stepDefinitions.paraBankRegister;
 
-import co.com.sofka.model.ContactUs.contactUsModel;
 import co.com.sofka.model.Register.registerModel;
 import co.com.sofka.page.Register.registerPage;
-import co.com.sofka.page.contactUs.ContacUsPage;
-import co.com.sofka.stepDefinitions.paraBank.contactus.ContactUsStepDefinition;
-import co.com.sofka.stepDefinitions.setUp.webUI;
+import co.com.sofka.stepDefinitions.setUp.webUiRegister;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
-public class registerStepDefinition extends webUI {
+public class registerStepDefinition extends webUiRegister {
 
     private static Logger LOGGER = Logger.getLogger(registerStepDefinition.class);
     private registerModel registerModel;
@@ -25,7 +22,7 @@ public class registerStepDefinition extends webUI {
             setUpWebDriver();
             generalStUp();
             registerModel = new registerModel();
-            registerModel.setFirstName("Robert");
+            registerModel.setFirstName("Andrea");
             registerModel.setLastName("Aroca");
             registerModel.setAddress("cll 22");
             registerModel.setCity("Neiva");
@@ -34,7 +31,7 @@ public class registerStepDefinition extends webUI {
             registerModel.setPhone("321098765");
             registerModel.setSSN("123");
 
-            registerModel.setUsername("ArokRoberth22");
+            registerModel.setUsername("Andrea Aroca");
             registerModel.setPassword("Rob931026");
             registerModel.setConfirm("Rob931026");
 
@@ -66,6 +63,8 @@ public class registerStepDefinition extends webUI {
 
     }
 
+    //Segundo scenario
+
     @Given("dado que se encuentra en el modulo registro")
     public void dado_que_se_encuentra_en_el_modulo_registro() {
         try {
@@ -73,8 +72,8 @@ public class registerStepDefinition extends webUI {
             setUpWebDriver();
             generalStUp();
             registerModel = new registerModel();
-            registerModel.setFirstName("Robert");
-            registerModel.setLastName("Aroca");
+            registerModel.setFirstName("Jair");
+            registerModel.setLastName("Ipuz");
             registerModel.setAddress("cll 22");
             registerModel.setCity("Neiva");
             registerModel.setState("Huila");
@@ -82,7 +81,7 @@ public class registerStepDefinition extends webUI {
             registerModel.setPhone("");
             registerModel.setSSN("123");
 
-            registerModel.setUsername("ArokRoberth33");
+            registerModel.setUsername("Arokroberth92");
             registerModel.setPassword("Rob931026");
             registerModel.setConfirm("Rob931026");
 

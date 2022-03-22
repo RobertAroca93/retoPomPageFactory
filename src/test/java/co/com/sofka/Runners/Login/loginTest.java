@@ -1,4 +1,4 @@
-package co.com.sofka.runners.register;
+package co.com.sofka.Runners.Login;
 
 
 import io.cucumber.junit.Cucumber;
@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        glue = {"co.com.sofka.stepDefinitions.paraBankRegister"},
-        features = {"src/test/resources/features/register.feature"},
+        glue = {"co.com.sofka.stepDefinitions.paraBankLogin"},
+        features = {"src/test/resources/features/login.feature"},
         publish = true
 )
-public class register {
+public class loginTest {
 }

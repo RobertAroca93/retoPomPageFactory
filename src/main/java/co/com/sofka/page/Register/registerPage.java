@@ -2,8 +2,6 @@ package co.com.sofka.page.Register;
 
 import co.com.sofka.model.Register.registerModel;
 import co.com.sofka.page.Common.commonActionOnPages;
-import co.com.sofka.page.contactUs.ContacUsPage;
-import io.cucumber.java.bs.A;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -114,7 +112,6 @@ public class registerPage extends commonActionOnPages {
         typeOn(State, registerModel.getState());
         scrollOn(Zipcode);
         typeOn(Zipcode, registerModel.getZipCode());
-
         scrollOn(SSN);
         typeOn(SSN, registerModel.getSSN());
 
@@ -125,7 +122,6 @@ public class registerPage extends commonActionOnPages {
         scrollOn(Confirm);
         typeOn(Confirm, registerModel.getConfirm());
         doSubmit(registerButton);
-
 
 
     }

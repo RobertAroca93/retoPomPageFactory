@@ -3,11 +3,11 @@ package co.com.sofka.stepDefinitions.setUp;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import static co.com.sofka.util.Log4jValues.LOG4J_PROPERTIES_FILE_PATH;
 import static com.google.common.base.StandardSystemProperty.USER_DIR;
 
-public class webUI {
+public class webUiRegister {
+
     private static final String WEBDRIVER_CHROME_DRIVER = "webdriver.chrome.driver";
     private static final String WEBDRIVER_CHROME_DRIVER_PATH = "src/test/resources/drivers/windows/Chrome/chromedriver.exe";
 
@@ -31,5 +31,4 @@ public class webUI {
     protected void quiteDriver(){
         driver.quit();
     }
-
 }

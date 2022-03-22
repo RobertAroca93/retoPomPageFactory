@@ -14,5 +14,5 @@ Feature: enviar mensaje para obtener soporte
 
   Scenario: diligenciamiento incorrecto del formulario para enviar el mensaje
     Given dado que me encuentro en el modulo del contacto del banco
-    When no diligencio uno de los campos
+    When no diligencio el campo phone
     Then el sistema debe solicitar que se diligencie ese campo
